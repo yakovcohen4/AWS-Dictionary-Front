@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# English-Dictionary-AWS - My frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Global use - 🌎
 
-In the project directory, you can run:
+### ✨ [Visit my website!](http://dictionary-rama.s3-website-eu-west-1.amazonaws.com) ✨
 
-### `npm start`
+#### Maybe it's blocked so you does not cost me any money 😏❌💸
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **The Front was served in S3 bucket as a static file.**
+- **The backend works with - DynamoDB to store data and serve the app by REST API (Api Gateway) in conjunction with Lambda serverless function.**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Local use - 📌
 
-### `npm test`
+### Github 🐱‍👤
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Clone this repo**
+- **Run `npm i` on the `client` and dir - To install all the dependencies**
 
-### `npm run build`
+#### To run the app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Run `npm start` on `client` dir (On PORT=3006)**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots 📸 -
 
-### `npm run eject`
+## 📲 Front interfaces:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Dynamic routes:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **`"BASE_URL/"` - For home page (picture I below ⬇)**
+- **`"BASE_URL/:word"` - For the result of a word search - all parts of speech (picture II below ⬇)**
+- **`"BASE_URL/:word/:partOfSpeech"` - For a result of a word search - in a specific parts of speech (picture II below ⬇)**
+- **`"BASE_URL/part-of-speech/:part"` - Receiving a random word in a specific parts of speech (picture III ⬇)**
+- **`"BASE_URL/part-of-speech/:part?letter=a"` - Receiving a random word in a specific parts of speech that contain specific word (picture III below ⬇)**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### <img src="./README-PICS/home.png"/><img src="./README-PICS/one-random.png"/>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### <img src="./README-PICS/some-word.png"/><img src="./README-PICS/not-found.png"/>
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Assignment - Front
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Your about to build an english dictionary app
+
+1. [x] **FRONTEND:**
+   1. [x] build a `create-react-app` english dictionary app (mobile first)
+   2. [x] URL routes:
+      1. [x] `/:word` - dynamic route - `word` is dynamic URL parameter, used to request backend api
+      1. [x] `/:word/:partOfSpeech` - dynamic route - `word` is dynamic URL parameter, used to request backend api
+      1. [x] `/part-of-speech/:part` - `part` is enum URL parameter, used to request backend api
+   3. [x] each word in dictionary is clickable and will redirect to a common URL
+   4. [x] **BONUS** should be deployed to `S3 bucket`
