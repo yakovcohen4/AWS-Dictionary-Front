@@ -65,17 +65,34 @@ function SearchWord() {
   return (
     <form id={'form-word'} onSubmit={e => handleSubmit(e)}>
       <h3 className="headers-h5">Search Word</h3>
-      {/* <button onClick={e => handleSubmit(e)} className="btn-search">
+      <button
+        onClick={e => handleSubmit(e)}
+        className="btn-search"
+        id="search-word-btn"
+      >
         <i className="fas fa-search"></i>
-      </button> */}
+      </button>
       <div className="search-box">
         <input
+          type="input"
+          className="form__field"
+          placeholder="Type to Search..."
+          name="name"
+          value={word ? word : ''}
+          onChange={e => handleChange(e)}
+          id="name"
+          required
+        />
+        <label htmlFor="name" className="form__label">
+          Search Word...
+        </label>
+        {/* <input
           type="text"
           className="input-search"
           placeholder="Type to Search..."
           value={word ? word : ''}
           onChange={e => handleChange(e)}
-        ></input>
+        ></input> */}
         <ul className="choose-pos">
           <li>
             Choose Part Of Speech:
@@ -92,12 +109,13 @@ function SearchWord() {
             </ul>
           </li>
         </ul>
-        <span className="part-result">{PartOfSpeech}</span>
+        <span className="part-result" id="word-part-result">
+          {PartOfSpeech}
+        </span>
+        <button className="search-both" onClick={e => handleClick(e)}>
+          Word & POS
+        </button>
       </div>
-
-      <button className="search-both" onClick={e => handleClick(e)}>
-        search both
-      </button>
 
       {loading && <h2 className="animate">Loading</h2>}
       {Items &&
