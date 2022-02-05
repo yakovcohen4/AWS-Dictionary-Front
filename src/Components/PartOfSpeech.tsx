@@ -5,9 +5,12 @@ import Definition from './Definition';
 import { posList } from '../DataPOS';
 
 function PartOfSpeech() {
+  /***** STATES *****/
   let [PartOfSpeech, setPartOfSpeech] = useState<string | null>(null);
   const [data, setData] = useState<null | any>(null);
+  // console.log(data);
 
+  /***** FUNCTIONS *****/
   const handleSubmit = async (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
@@ -19,12 +22,11 @@ function PartOfSpeech() {
         if (res.data.definitions.length === 0) {
           throw new Error('no result of this word');
         }
-        setData(res.data);
+        setData([res.data]);
       }
       setPartOfSpeech(null);
     } catch (error) {
       console.log(error);
-      // setPartOfSpeech(null);
     }
   };
 
@@ -55,28 +57,30 @@ function PartOfSpeech() {
         </ul>
         <span className="part-result">{PartOfSpeech}</span>
       </form>
-      {data && (
-        <div>
-          <div className="word-div">
-            The random word: <span className="word">{data.word}</span>
-          </div>
-          <div className="item">
-            <div className="item-pos">[{data.pos}]</div>
-            <div className="item-definitions">
-              {data.definitions.map((definition: string, index: number) => {
-                return (
-                  <Definition
-                    key={index}
-                    definition={definition}
-                    // handleSubmit={handleSubmit}
-                    setItems={setData}
-                  />
-                );
-              })}
+      {loading && <h2 className="animate">Loading</h2>}
+      {data &&
+        data.map((data: any) => (
+          <div>
+            <div className="word-div">
+              The random word: <span className="word">{data.word}</span>
+            </div>
+            <div className="item">
+              <div className="item-pos">[{data.pos}]</div>
+              <div className="item-definitions">
+                {data.definitions.map((definition: string, index: number) => {
+                  return (
+                    <Definition
+                      key={index}
+                      definition={definition}
+                      setItems={setData}
+                      setLoading={setLoading}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        ))}
     </div>
   );
 }
