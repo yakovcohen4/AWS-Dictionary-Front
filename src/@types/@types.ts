@@ -2,6 +2,7 @@ export interface FullDefinitions {
   definition: string;
   // handleSubmit: handleSubmitSearchWord | handleSubmitPartOfSpeech;
   setItems: React.Dispatch<any>;
+  setLoading: React.Dispatch<boolean>;
 }
 
 // type handleSubmitSearchWord = (

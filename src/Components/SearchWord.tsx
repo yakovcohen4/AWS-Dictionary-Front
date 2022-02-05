@@ -5,11 +5,13 @@ import Definition from './Definition';
 import { posList } from '../DataPOS';
 
 function SearchWord() {
+  /***** STATES *****/
   const [word, setWord] = useState<null | string>(null);
   const [Items, setItems] = useState<null | any>(null);
   const [loading, setLoading] = useState<boolean>(false);
   let [PartOfSpeech, setPartOfSpeech] = useState<string | null>(null);
 
+  /***** FUNCTIONS *****/
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setWord(e.target.value);
   };
@@ -86,13 +88,6 @@ function SearchWord() {
         <label htmlFor="name" className="form__label">
           Search Word...
         </label>
-        {/* <input
-          type="text"
-          className="input-search"
-          placeholder="Type to Search..."
-          value={word ? word : ''}
-          onChange={e => handleChange(e)}
-        ></input> */}
         <ul className="choose-pos">
           <li>
             Choose Part Of Speech:
@@ -129,8 +124,8 @@ function SearchWord() {
                     <Definition
                       key={index}
                       definition={definition}
-                      // handleSubmit={handleSubmit}
                       setItems={setItems}
+                      setLoading={setLoading}
                     />
                   );
                 })}
