@@ -4,10 +4,10 @@ export interface FullDefinitions {
   setItems: React.Dispatch<any>;
 }
 
-type handleSubmitSearchWord = (
-  e: React.FormEvent<HTMLFormElement> | React.FormEvent<HTMLButtonElement>
-) => Promise<void>;
+// type handleSubmitSearchWord = (
+//   e: React.FormEvent<HTMLFormElement> | React.FormEvent<HTMLButtonElement>
+// ) => Promise<void>;
 
-type handleSubmitPartOfSpeech = (
-  e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-) => Promise<void>;
+// type handleSubmitPartOfSpeech = (
+//   e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+// ) => Promise<void>;
