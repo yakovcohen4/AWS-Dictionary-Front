@@ -30,7 +30,7 @@
 
 ### To Do -
 
-- error handling to fail request.
+- Error handling to fail request.
 
 ---
 
