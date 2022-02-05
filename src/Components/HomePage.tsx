@@ -22,9 +22,6 @@ const HomePage = () => {
           <li>Word</li>
           <li>Word with a specific part of speech</li>
           <li>A random word from a specific part of speech</li>
-          <li>
-            A random word from a specific part of speech and letter begin with
-          </li>
         </ul>
       </div>
     </div>
