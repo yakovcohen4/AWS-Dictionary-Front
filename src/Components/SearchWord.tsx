@@ -21,12 +21,12 @@ function SearchWord() {
   ) => {
     e.preventDefault();
     setLoading(true);
-    console.log(word);
+
     try {
       const res = await axios.get(
         `${BASE_URL}/${word!.replace(/[^a-zA-Z ]/g, '')}`
       );
-      console.log(res);
+
       if (res.status === 200) {
         if (res.data.Items.length === 0) {
           throw new Error('no result of this word');
@@ -36,11 +36,8 @@ function SearchWord() {
       }
     } catch (error) {
       console.log(error);
-      // setLoading(false);
     }
     setLoading(false);
-
-    // setWord(null);
   };
 
   const handleClick = async (
@@ -49,19 +46,15 @@ function SearchWord() {
     e.preventDefault();
     try {
       const res = await axios.get(`${BASE_URL}/${word}/${PartOfSpeech}`);
-      console.log(res);
       if (res.status === 200) {
         if (res.data.Items.length === 0) {
           throw new Error('no result of this word');
-          // throw { status: 404, message: 'no result of this word' };
         }
         setItems(res.data.Items);
       }
     } catch (error) {
       console.log(error);
     }
-
-    // setWord(null);
   };
 
   return (

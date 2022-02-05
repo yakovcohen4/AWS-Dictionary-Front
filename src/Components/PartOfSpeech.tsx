@@ -9,7 +9,6 @@ function PartOfSpeech() {
   let [PartOfSpeech, setPartOfSpeech] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [data, setData] = useState<null | any>(null);
-  // console.log(data);
 
   /***** FUNCTIONS *****/
   const handleSubmit = async (
@@ -19,7 +18,6 @@ function PartOfSpeech() {
     setLoading(true);
     try {
       const res = await axios.get(`${BASE_URL}/part-of-speech/${PartOfSpeech}`);
-      console.log(res);
       if (res.status === 200) {
         if (res.data.definitions.length === 0) {
           throw new Error('no result of this word');
