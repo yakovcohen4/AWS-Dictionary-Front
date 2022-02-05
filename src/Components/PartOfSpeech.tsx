@@ -8,13 +8,10 @@ function PartOfSpeech() {
   let [PartOfSpeech, setPartOfSpeech] = useState<string | null>(null);
   const [data, setData] = useState<null | any>(null);
 
-  console.log(PartOfSpeech);
-
   const handleSubmit = async (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
-    console.log(PartOfSpeech);
     try {
       const res = await axios.get(`${BASE_URL}/part-of-speech/${PartOfSpeech}`);
       console.log(res);
@@ -34,7 +31,9 @@ function PartOfSpeech() {
   return (
     <div>
       <form role="navigation" className="primary-navigation">
-        <h5 className="headers-h5">Random Word</h5>
+        <h3 className="headers-h5" id="header-pos">
+          Part Of Speech
+        </h3>
         <button className="btn-search" onClick={e => handleSubmit(e)}>
           <i className="fas fa-search"></i>
         </button>

@@ -27,11 +27,16 @@ body {
 }
 
 form .headers-h5 {
-  margin: 2% 2%;
-  font-size: 1.5em;
+  // margin: 2% 2%;
   text-align: left;
   font-family: cursive;
-  font-weight: 400;
+  font-size: 2em;
+  font-weight: 500;
+  margin-left: 0.5em;
+}
+// only pos
+#header-pos {
+  margin-left: 5.5em;
 }
 
 /* search-word */
@@ -70,7 +75,8 @@ form .headers-h5 {
   cursor: pointer;
   border-radius: 50%;
   position: absolute;
-  right: 0px;
+  right: 10px;
+  top: 163px;
   color: #ffffff;
   background-color: transparent;
   pointer-events: painted;
@@ -118,6 +124,8 @@ form {
     ul li {
       list-style: none;
       margin: 0 auto;
+      font-size: 1.2em;
+      font-weight: 500;
       // margin-left: -2em;
       // border-left: 2px solid #3ca0e7;
       display: inline-block;
@@ -141,6 +149,7 @@ form {
     }
 
     ul li ul {
+      font-size: 0.9rem;
       visibility: hidden;
       opacity: 0;
       position: absolute;
@@ -178,7 +187,8 @@ form {
   .part-result {
     position: absolute;
     margin-left: 35%;
-    margin-top: -9.5%;
+    margin-top: -10.8%;
+    font-size: 1.2rem;
   }
 }
 

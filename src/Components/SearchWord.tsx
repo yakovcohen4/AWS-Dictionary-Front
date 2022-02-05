@@ -64,7 +64,7 @@ function SearchWord() {
 
   return (
     <form id={'form-word'} onSubmit={e => handleSubmit(e)}>
-      <h5 className="headers-h5">Search Word</h5>
+      <h3 className="headers-h5">Search Word</h3>
       {/* <button onClick={e => handleSubmit(e)} className="btn-search">
         <i className="fas fa-search"></i>
       </button> */}
