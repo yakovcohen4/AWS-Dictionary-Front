@@ -96,19 +96,6 @@ form .headers-h5 {
   transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 
-/* Drop down */
-/* ul li {
-  list-style: none;
-  margin: 0 auto;
-  border-left: 2px solid #3ca0e7;
-  display: inline-block;
-  padding: 0 30px;
-  position: relative;
-  text-decoration: none;
-  text-align: center;
-  font-family: arvo;
-} */
-
 form {
   &.primary-navigation {
     // margin: 0 auto;
@@ -207,8 +194,7 @@ a {
 ul li ul li a {
   transition: all 0.5s ease;
 }
-// item
-
+// item-result
 .item {
   display: flex;
   flex-direction: row;
@@ -230,26 +216,27 @@ ul li ul li a {
     padding-left: 4%;
     font-size: smaller;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    // padding: 1%;
   }
 }
 
 .word-div {
+  margin-left: -3.5em;
   text-transform: capitalize;
+  font-size: 1.1rem;
 }
 .word {
   &::first-letter {
     text-transform: uppercase;
   }
   text-transform: lowercase;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .one-definition {
-  // border-bottom: 1px black solid;
   margin-top: 2%;
 }
 
-// mustttt!!!
 // search word
 .choose-pos {
   margin-left: -12em;
@@ -257,8 +244,6 @@ ul li ul li a {
     font-size: 1.1rem;
     list-style: none;
     margin: 0 auto;
-    // margin-left: -2em;
-    // border-left: 2px solid #3ca0e7;
     display: inline-block;
     padding: 0 30px;
     position: relative;
@@ -296,7 +281,6 @@ ul li ul li a {
     visibility: visible;
     opacity: 1;
     display: block;
-    // min-width: 250px;
     text-align: left;
     padding-top: 10px;
     box-shadow: 0px 3px 5px -1px #ccc;
@@ -316,11 +300,7 @@ ul li ul li a {
   }
 }
 
-// loader
-// #form-word {
-//   margin-bottom: 10em;
-// }
-
+// Loading
 .animate {
   display: flex;
   justify-content: center;
@@ -445,15 +425,12 @@ button.search-both:active {
 .open-nav {
   margin-right: 5%;
   cursor: pointer;
-  // position: absolute;
-  // top: 0;
 }
 
 // Home Page
 .homepage-div {
   text-align: left;
   h3 {
-    // font-family: 'Roboto', sans-serif;
     font-family: cursive;
     font-size: 2em;
     font-weight: 500;
@@ -470,7 +447,6 @@ button.search-both:active {
         font-weight: 300;
         margin: 0;
         margin-left: 0.5em;
-        // padding: 5px;
       }
     }
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -481,9 +457,9 @@ button.search-both:active {
         margin-bottom: 5px;
         margin-left: 5px;
         margin-right: 10px;
-        // color: black;
+
         font-weight: 500;
-        // font-family: arvo;
+
         border-bottom: #22a6b3 1px solid;
       }
     }
@@ -497,10 +473,8 @@ $white: #fff;
 $gray: #9b9b9b;
 
 .form__field {
-  // position: relative;
   margin: 10px 10px;
-  // top: 190px;
-  // left: 20px;
+
   font-family: inherit;
   width: 90%;
   border: 0;
