@@ -7,6 +7,7 @@ import { posList } from '../DataPOS';
 function PartOfSpeech() {
   /***** STATES *****/
   let [PartOfSpeech, setPartOfSpeech] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
   const [data, setData] = useState<null | any>(null);
   // console.log(data);
 
@@ -15,6 +16,7 @@ function PartOfSpeech() {
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const res = await axios.get(`${BASE_URL}/part-of-speech/${PartOfSpeech}`);
       console.log(res);
@@ -28,6 +30,7 @@ function PartOfSpeech() {
     } catch (error) {
       console.log(error);
     }
+    setLoading(false);
   };
 
   return (

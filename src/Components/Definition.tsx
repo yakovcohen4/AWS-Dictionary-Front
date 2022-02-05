@@ -4,12 +4,15 @@ import { MouseEvent } from 'react';
 import { FullDefinitions } from '../@types/@types';
 import { BASE_URL } from '../App';
 
-function Definitions({ definition, setItems }: FullDefinitions) {
+function Definitions({ definition, setItems, setLoading }: FullDefinitions) {
+  /***** FUNCTIONS *****/
   const searchByClick = async (
     e: MouseEvent<HTMLSpanElement, globalThis.MouseEvent>
   ) => {
     const word = (e.target as HTMLSpanElement).innerHTML;
-    console.log(word);
+
+    setLoading(true);
+
     try {
       const res = await axios.get(
         `${BASE_URL}/${word!.replace(/[^a-zA-Z ]/g, '')}`
@@ -29,8 +32,8 @@ function Definitions({ definition, setItems }: FullDefinitions) {
       }
     } catch (error) {
       console.log(error);
-      // setLoading(false);
     }
+    setLoading(false);
   };
 
   const definitionArr = definition.split(' ');
