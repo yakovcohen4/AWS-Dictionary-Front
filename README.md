@@ -14,9 +14,9 @@
 
 ---
 
-## My App -
+## My App 📖 -
 
-link
+## 🔗 [Yakov's Dictionary](http://dictionary-yakov2.s3-website-eu-west-1.amazonaws.com/)
 
 ### Features -
 
@@ -27,6 +27,10 @@ link
 - By clicking on any of the words you can switch to the definition of the same word!
 - Mobile first design!
 - Nice loader.
+
+### To Do -
+
+- error handling to fail request.
 
 ---
 
