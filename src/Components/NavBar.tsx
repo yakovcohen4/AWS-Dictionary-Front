@@ -30,20 +30,20 @@ const NavBar = () => {
         </span>
         <span
           onClick={() => {
-            navigate('/word/welcome');
+            navigate('/word/:word');
             closeNav();
           }}
         >
-          Word
+          Search Word
         </span>
 
         <span
           onClick={() => {
-            navigate('/random-word-pos/conjunctions');
+            navigate('/part-of-speech/:part');
             closeNav();
           }}
         >
-          Random Word Pos
+          Part Of Speech
         </span>
       </span>
 
