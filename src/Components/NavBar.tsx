@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
-  const mySidenav = useRef<HTMLDivElement>(null);
+  const mySidenav = useRef<HTMLSpanElement>(null);
   const navigate = useNavigate();
   const openNav = () => {
     if (mySidenav.current !== null) {
@@ -15,8 +15,8 @@ const NavBar = () => {
     }
   };
   return (
-    <div>
-      <div ref={mySidenav} id="mySidenav" className="sidenav">
+    <span>
+      <span ref={mySidenav} id="mySidenav" className="sidenav">
         <span className="closebtn" onClick={closeNav}>
           &times;
         </span>
@@ -45,22 +45,12 @@ const NavBar = () => {
         >
           Random Word Pos
         </span>
-        {/* <span
-          onClick={() => {
-            navigate('/random-word-pos-start-with');
-            closeNav();
-          }}
-        >
-          Random Word Pos With Letter
-        </span> */}
-      </div>
-      {/* // Use any element to open the sidenav */}
+      </span>
+
       <span className="open-nav" onClick={openNav}>
         ☰
       </span>
-      {/* // Add all page content inside this div if you want the side nav to push page content to the
-      right (not used if you only want the sidenav to sit on top of the page */}
-    </div>
+    </span>
   );
 };
 
