@@ -2,43 +2,49 @@
 
 ---
 
-## Global use - 🌎
+## Technologies in use 💻 -
 
-### ✨ [Visit my website!](http://dictionary-rama.s3-website-eu-west-1.amazonaws.com) ✨
+- #### React
 
-#### Maybe it's blocked so you does not cost me any money 😏❌💸
+- #### TypeScript
 
-- **The Front was served in S3 bucket as a static file.**
-- **The backend works with - DynamoDB to store data and serve the app by REST API (Api Gateway) in conjunction with Lambda serverless function.**
+- #### AWS - S3 simple storage service
 
-## Local use - 📌
-
-### Github 🐱‍👤
-
-- **Clone this repo**
-- **Run `npm i` on the `client` and dir - To install all the dependencies**
-
-#### To run the app
-
-- **Run `npm start` on `client` dir (On PORT=3006)**
+#### Packages 📦 - axios, nanoid, react-router-dom ,sass
 
 ---
 
-## Screenshots 📸 -
+## My App -
 
-## 📲 Front interfaces:
+link
+
+### Features -
+
+- Over 30,000 words!
+- Search by word and get all its definitions in the different parts of speech.
+- Search by word and part of speech desired.
+- Receiving a random word in a particular part of speech.
+- By clicking on any of the words you can switch to the definition of the same word!
+- Mobile first design!
+- Nice loader.
+
+---
+
+## Screenshots -
 
 ### Dynamic routes:
 
-- **`"BASE_URL/"` - For home page (picture I below ⬇)**
-- **`"BASE_URL/:word"` - For the result of a word search - all parts of speech (picture II below ⬇)**
-- **`"BASE_URL/:word/:partOfSpeech"` - For a result of a word search - in a specific parts of speech (picture II below ⬇)**
-- **`"BASE_URL/part-of-speech/:part"` - Receiving a random word in a specific parts of speech (picture III ⬇)**
-- **`"BASE_URL/part-of-speech/:part?letter=a"` - Receiving a random word in a specific parts of speech that contain specific word (picture III below ⬇)**
+- **`"BASE_URL/"` - For home page**
 
-### <img src="./README-PICS/home.png"/><img src="./README-PICS/one-random.png"/>
+![Home Page](./README-PICS/front-homepage.png)
 
-### <img src="./README-PICS/some-word.png"/><img src="./README-PICS/not-found.png"/>
+- **`"BASE_URL/word/:word"` - For the result of a word search - All Parts Of Speech**
+
+![Search Word - Example](./README-PICS/front-search-word.png)
+
+- **`"BASE_URL/part-of-speech/:part"` - Receiving a random word in a specific parts of speech**
+
+![Random Part Of Speech](./README-PICS/front-part-of-speech.png)
 
 ---
 
